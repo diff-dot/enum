@@ -9,7 +9,7 @@ export class Enum {
   tag?: string;
 
   // eslint-disable-next-line
-  public constructor(id: number, tag?: string, ...args: any) {
+  public constructor(id: EnumId, tag?: string, ...args: any) {
     this.id = id;
     this.tag = tag;
   }
