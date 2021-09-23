@@ -6,12 +6,11 @@ export type EnumId = string | number;
 
 export class Enum {
   id: EnumId;
-  tag?: string;
+  tag?: string; // 태그를 통한 탐색 등이 필요할 경우 생성자를 별도 정의하여 사용
 
   // eslint-disable-next-line
-  public constructor(id: EnumId, tag?: string, ...args: any) {
+  public constructor(id: EnumId, ...args: any) {
     this.id = id;
-    this.tag = tag;
   }
 
   private static _idMap: Map<EnumId, Enum>;
